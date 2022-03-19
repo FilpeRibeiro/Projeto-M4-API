@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "projeto-m4-api",
+  "version": "0.0.1",
+  "description": "Projeto de final de modulo para criaçao de uma Api referente a uma loja de informatica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilpeRibeiro/Projeto-M4-API.git"
+  },
+  "author": "Filipe Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FilpeRibeiro/Projeto-M4-API/issues"
+  },
+  "homepage": "https://github.com/FilpeRibeiro/Projeto-M4-API#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jet": "^0.8.0",
+    "node": "^17.7.1",
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.2.2"
+  }
+}
