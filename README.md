@@ -1,7 +1,7 @@
 # Projeto-M4-API
 <div align="center">
   <a href="https://github.com/FilpeRibeiro/Projeto-M4-API">
-    <img src="./src/image/LOGO.jpg" alt="Logo loja Shark Informatica" width="100" height="100">
+    <img src="./src/image/LOGO.jpg" alt="Logo loja Shark Informatica" width="500" height="300">
   </a>
   
   <h1 align="center">Loja de Informática API</h1>
