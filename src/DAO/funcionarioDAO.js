@@ -22,10 +22,7 @@ class FuncionarioDAO{
                 if(error){
                     reject(error)
                 }else{
-                    resolve({
-                        "Funcionarios": rows,
-                        "erro": false
-                    })
+                    resolve(rows)
                 }
             })
         })
@@ -37,10 +34,7 @@ class FuncionarioDAO{
                 if(error){
                     reject(error)
                 }else{
-                    resolve({
-                        "Funcionarios": rows,
-                        "erro": false
-                    })
+                    resolve(rows)
                 }
             })
         })
@@ -67,10 +61,7 @@ class FuncionarioDAO{
                 if(error){
                     reject(error)
                 }else{
-                    resolve({
-                        "Funcionarios": `Funcionario de id ${id} deletado com sucesso`,
-                        "erro": false
-                    })
+                    resolve(`Funcionario de id ${id} deletado com sucesso` )
                 }
             })
         })
@@ -83,11 +74,7 @@ class FuncionarioDAO{
                 if(error){
                     reject(error)
                 }else{
-                    resolve({
-                        "mensagem": `Funcionario de id ${id} atualizado com sucesso`,
-                        "Funcionarios": funcionario,
-                        "erro": false
-                    })
+                    resolve( `Funcionario de id ${id} atualizado com sucesso`)
                 }
             })
         })

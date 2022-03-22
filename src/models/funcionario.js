@@ -10,7 +10,7 @@ class Funcionario{
         try {
             return await this.dao.pegaTodosFuncionarios()
         } catch (error) {
-            throw new Error(error.mensagem)
+            throw error
         }
     }
 
@@ -18,10 +18,7 @@ class Funcionario{
         try {
             return await this.dao.pegaUmFuncionario(email)
         } catch (error) {
-            return {
-                "mensagem": error.message,
-                "erro" : true
-            }
+            throw error
         }
     }
 
@@ -30,41 +27,38 @@ class Funcionario{
             const novoUsuario = new FuncionarioSchema(funcionario.nome, funcionario.email, funcionario.cpf, funcionario.cargo)
             return await this.dao.insereFuncionario(novoUsuario)
         } catch (error) {
-            throw new Error(error.message)
+            throw error
         }
     }
 
     deletaFuncionario = async (id)=>{
         try {
+            
             await this._verificaFuncionario(id)
             
             return await this.dao.deletaFuncionario(id)
         } catch (error) {
-            return {
-                "mensagem": error.message,
-                "erro" : true
-            }
+            throw error
         }
     }
 
     atualizaFuncionario = async (id, funcionario)=>{
         try {
+            
             await this._verificaFuncionario(id)
 
+        
             const funcionarioAtualizado = new FuncionarioSchema(funcionario.nome, funcionario.email, funcionario.cpf, funcionario.cargo)
 
             return await this.dao.atualizaFuncionario(id, funcionarioAtualizado)
         } catch (error) {
-            return ({
-                "mensagem": error.message,
-                "erro" : true
-            })
+            throw error
         }
     }
 
     _verificaFuncionario = async (id)=>{
         const resposta = await this.dao.pegaUmFuncionarioId(id)
-        if(resposta.funcionario.length === 0){
+        if(resposta.length === 0){
             throw new Error(`Funcionario de id ${id} não existe`)
         }
     }

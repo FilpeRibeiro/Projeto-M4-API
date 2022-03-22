@@ -47,18 +47,43 @@ const funcionarioController = (app, db)=>{
     })
 
     app.delete('/funcionario/id/:id', async (req, res)=>{
-        
         const id = req.params.id
-
-        res.json(await funcionarioModel.deletaFuncionario(id))
-
+        try {
+            const resposta = await funcionarioModel.deletaFuncionario(id)
+            res.status(200)
+            .json({
+                "mensagem" : resposta,
+                "erro" : false
+            })
+            
+        } catch (error) {
+            res.status(400)
+            .json({
+                "mensagem" : error.message,
+                "erro" : true
+            })
+        }
     })
 
     app.put('/funcionario/id/:id', async (req, res)=>{
+        
         const id = req.params.id
         const body = req.body
-
-        res.json(await funcionarioModel.atualizaFuncionario(id , body))
+        try {
+            const resposta = await funcionarioModel.atualizaFuncionario(id, body)
+            res.status(200)
+            .json({
+                "mensagem" : resposta,
+                "Funcionario": body,
+                "erro" : false
+            })
+        } catch (error) {
+            res.status(400)
+            .json({
+                "mensagem" : error.message,
+                "erro" : true
+            })
+        }
     })
 
 }
