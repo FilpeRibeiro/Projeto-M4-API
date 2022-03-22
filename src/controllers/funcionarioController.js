@@ -8,7 +8,7 @@ const funcionarioController = (app, db)=>{
             const resposta = await funcionarioModel.pegaTodosFuncionarios()
             res.status(200)
             .json({
-                "usuarios" : resposta,
+                "Funcionarios" : resposta,
                 "erro" : false
             })
         } catch (error) {

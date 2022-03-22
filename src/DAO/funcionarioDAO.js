@@ -23,7 +23,7 @@ class FuncionarioDAO{
                     reject(error)
                 }else{
                     resolve({
-                        "funcionario": rows,
+                        "Funcionarios": rows,
                         "erro": false
                     })
                 }
@@ -38,7 +38,7 @@ class FuncionarioDAO{
                     reject(error)
                 }else{
                     resolve({
-                        "funcionario": rows,
+                        "Funcionarios": rows,
                         "erro": false
                     })
                 }
@@ -49,7 +49,7 @@ class FuncionarioDAO{
     insereFuncionario = (novoFuncionario) =>{
 
         return new Promise((resolve, reject)=>{
-            this.db.run("INSERT INTO FUNCIONaRIOS(NOME, EMAIL, CPF, CARGO) VALUES (?, ?, ?, ?)",
+            this.db.run("INSERT INTO FUNCIONARIOS(NOME, EMAIL, CPF, CARGO) VALUES (?, ?, ?, ?)",
                 novoFuncionario.nome, novoFuncionario.email, novoFuncionario.cpf, novoFuncionario.cargo ,(error)=>{
                 if(error){
                     reject(error)
@@ -68,7 +68,7 @@ class FuncionarioDAO{
                     reject(error)
                 }else{
                     resolve({
-                        "funcionario": `Funcionario de id ${id} deletado com sucesso`,
+                        "Funcionarios": `Funcionario de id ${id} deletado com sucesso`,
                         "erro": false
                     })
                 }
@@ -85,7 +85,7 @@ class FuncionarioDAO{
                 }else{
                     resolve({
                         "mensagem": `Funcionario de id ${id} atualizado com sucesso`,
-                        "funcionario": funcionario,
+                        "Funcionarios": funcionario,
                         "erro": false
                     })
                 }

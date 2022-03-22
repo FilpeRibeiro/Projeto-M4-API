@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./src/server.js"
+    "start": "node ./src/server.js",
+    "create": "node ./src/database/cria-inseri.js"
   },
   "repository": {
     "type": "git",

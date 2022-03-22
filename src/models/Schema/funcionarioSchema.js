@@ -2,7 +2,7 @@ class FuncionarioSchema{
     constructor(nome, email, cpf , cargo){
         this.nome = nome
         this.email = email
-        this.cargo = this._validaCpf(cpf)
+        this.cpf = this._validaCpf(cpf)
         this.cargo =cargo
     }
 
