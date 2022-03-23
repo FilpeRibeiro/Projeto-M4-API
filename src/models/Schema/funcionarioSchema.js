@@ -1,4 +1,8 @@
+
+
 class FuncionarioSchema{
+
+    
     constructor(nome, email, cpf , cargo){
         this.nome = nome
         this.email = email
@@ -7,11 +11,11 @@ class FuncionarioSchema{
     }
 
     _validaCpf = (cpf)=>{
-        if(cpf.length >= 9){
+        if(cpf.length === 11){
             return cpf
         }
         else{
-            throw new Error("O CPF precisa ter mais de 9 caracteres")
+            throw new Error("O CPF precisa ter 11 caracteres")
         }
     }
 
