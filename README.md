@@ -66,7 +66,14 @@ Lembre-se do que você irá precisará ter instalado em sua máquina para execut
    ```sh
    npm install sqlite3
    ```
-   
+4. Instale Jet
+   ```sh
+   npm install jet
+   ```
+5. Instale Super Test
+   ```sh
+   npm install supertest
+   ```
   #### Instalação
   
   Abra o terminal/Powershell e rode os comandos abaixo:

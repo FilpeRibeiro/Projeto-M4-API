@@ -5,8 +5,9 @@
   "description": "Projeto de final de modulo para criaçao de uma Api referente a uma loja de informatica",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "dev": "node ./src/server.js",
+    "start": "nodemon ./src/server.js",
     "create": "node ./src/database/cria-inseri.js"
   },
   "repository": {
