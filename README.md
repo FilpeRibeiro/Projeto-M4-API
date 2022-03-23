@@ -108,7 +108,7 @@ npm run create
 
 Ao executar a entidade funcionarios, aparecerá os atributos adicionados à ela, que são: id, nome, email, cpf, cargo. Veja os resultados:
 
-* Método GET para visualizar todos os funcionarios marcados. ( /funcionarios)
+* Método GET para visualizar todos os funcionarios marcados. ( /funcionario)
 
 Schema da resposta. 
 ```sh
