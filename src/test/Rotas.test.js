@@ -19,7 +19,7 @@ describe('POST /funcionario', ()=>{
         return request(app).post('/funcionario')
         .send({
             "nome" : "nome",
-            "cpf" : "adcb12345",
+            "cpf" : "3692587147",
             "email" : "nome@email.com",
             "cargo":"cargo"
         })
@@ -28,20 +28,4 @@ describe('POST /funcionario', ()=>{
             expect(response.body.mensagem).toBeTruthy()
         })
     })
-
-    test('Erro com senha invalida', ()=>{
-        
-        return request(app).post('/funcionario')
-        .send({
-            "nome" : "nome",
-            "cpf" : "adcb12345",
-            "email" : "nome@email.com",
-            "cargo":"cargo"
-        })
-        .then((response)=>{
-            console.log(response.body)
-            expect(response.body.erro).toBeTruthy()
-        })
-    })
-
 })

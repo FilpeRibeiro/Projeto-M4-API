@@ -66,9 +66,9 @@ Lembre-se do que você irá precisará ter instalado em sua máquina para execut
    ```sh
    npm install sqlite3
    ```
-4. Instale Jet
+4. Instale Jest
    ```sh
-   npm install jet
+   npm install jest
    ```
 5. Instale Super Test
    ```sh
@@ -89,6 +89,10 @@ cd Projeto-M4-API
 Para iniciar os projetos use o comando abaixo
 ```sh
 npm start
+```
+Para executar o teste da rota post e da corpo das rotas executar
+```sh
+npm run test
 ```
 
 #### Popular o banco de dados

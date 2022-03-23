@@ -22,7 +22,7 @@
   "homepage": "https://github.com/FilpeRibeiro/Projeto-M4-API#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "jet": "^0.8.0",
+    "jest": "^27.5.1",
     "node": "^17.7.1",
     "nodemon": "^2.0.15",
     "sqlite3": "^5.0.2",
