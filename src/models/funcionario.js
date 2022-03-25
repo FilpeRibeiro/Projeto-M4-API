@@ -48,10 +48,6 @@ class Funcionario{
 
     atualizaFuncionario = async (id, funcionario)=>{
         try {
-            
-            
-            
-            // const funcionarioAtualizado = new FuncionarioSchema(funcionario.nome, funcionario.email, funcionario.cpf, funcionario.cargo)
             if(this.validarCPF(funcionario.cpf) == true){
                 await this._verificaFuncionario(id)
             return await this.dao.atualizaFuncionario(id, funcionario)
